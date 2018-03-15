@@ -1,0 +1,186 @@
+body{
+		font-family: 'Open Sans', sans-serif;
+}
+
+.logo{
+	    padding: 15px;
+}
+
+.header-container{
+	padding-top:5px;
+	font-weight: bold;
+	background: red;
+	color:white;
+	text-align: center;
+}
+
+.company-logo{
+	font-weight: 800;
+	font-size:26px;
+	padding-top:5px;
+	text-transform: uppercase;
+}
+
+.company-des{
+	font-family:Arial;
+	font-size:8pt;
+	padding-top:5px;
+}
+
+.wrapper{
+	font-family: Arial;
+}
+
+.header-nav ul {
+  background:black;  
+  padding: 14px;
+}
+
+.header-nav a{
+  font-family:Arial Black;
+  color:white;
+  font-weight: bold;
+  margin: 7px;
+  text-decoration: none
+}
+
+.header-nav .active{
+	color:yellow;
+}
+
+
+.header-nav a:hover{
+  color: yellow;
+}
+
+.main-content div{
+	padding:30px;
+}
+
+.main-content{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.aside-image{
+ float:left;
+}
+
+.about-image{
+   border-radius: 50%;  
+}
+
+.article{
+ padding: 10px;
+}
+
+.footer{
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+.footer  img {
+	width: 40px;
+	padding:20px; 
+}
+
+
+
+.gallery{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+
+
+
+  
+}
+
+.gallery-item{
+  background: tomato;
+  padding: 1px;
+  width: 300px;
+  height: 300px;
+  margin-top: 10px;
+  
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+
+  padding: 2px 16px;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+   
+  text-align: center;
+
+  padding: 18px 32px;
+
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px 38px; 
+}
+
+/*Desktop version*/
+/*@media (min-width: 700px) { 
+	.main-content{
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	.header-container {
+	     font-weight: bold;
+	    background: red;
+	    color: white;
+	    text-align: left;
+	    padding: 10px;
+	    border-bottom: black 6px solid;
+	}
+
+	.header-nav {
+    	text-align: right;
+    }
+
+    .header-nav ul {
+	    background: red;
+	    padding: 14px;
+	}
+
+	.logo {	  
+	    float: left;
+	    padding-left:50px;
+	    padding-top: 2px;
+	}
+	.article {
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+    text-align: justify
+	}
+
+	.main-content .aside-image{
+	padding-top: 80px;
+ 	float:left;
+	}
+}*/
