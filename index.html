@@ -4,10 +4,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,700i,800" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,700i,800">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.css">
+
 </head>
 <body>
-<div class="wrapper">
+<div class="animsition wrapper">
 	<header>
 		<div class="header-container">
 			<div class="logo">
@@ -16,8 +18,12 @@
 			</div>
 			<nav>
 				<div class="header-nav">
-					<ul>
-						<a href="#">Porfolio</a>
+					<ul >
+						<a href="content.html"
+							class="animsition-link"
+							data-animsition-out-class="rotate-out"
+							data-animsition-out-duration="500"						
+						>Porfolio</a>
 						<a class="active" href="#">About</a>
 						<a href="#">Contact</a>
 					</ul>
@@ -53,5 +59,38 @@
 		</div>
 	</footer>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
+
+<script>
+		$(document).ready(function() {
+		  $(".animsition").animsition({
+			inClass: 'fade-in-left',
+			outClass: 'fade-out-left',
+			inDuration: 1500,
+			outDuration: 800,
+			linkElement: '.animsition-link',
+			// e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+			loading: true,
+			loadingParentElement: 'body', //animsition wrapper element
+			loadingClass: 'animsition-loading',
+			loadingInner: '', // e.g '<img src="loading.svg" />'
+			timeout: false,
+			timeoutCountdown: 5000,
+			onLoadEvent: true,
+			browser: [ 'animation-duration', '-webkit-animation-duration'],
+			// "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+			// The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+			overlay : false,
+			overlayClass : 'animsition-overlay-slide',
+			overlayParentElement : 'body',
+			transition: function(url){ window.location.href = url; }
+		  });
+		});
+		
+		</script>
 </body>
+
+
 </html>
