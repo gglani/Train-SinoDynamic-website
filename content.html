@@ -3,9 +3,11 @@
 <title>SINODYNAMIC</title>
 <link rel="stylesheet" type="text/css" href="css/normalize.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">	
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.css">	
+
 </head>
 <body>
-<div>
+<div class="animsition wrapper">
 	<header>
 		<div class="header-container">
 			<div class="logo">
@@ -14,9 +16,9 @@
 			</div>
 			<nav>
 				<div class="header-nav">
-					<ul>
-						<a href="#">Porfolio</a>
-						<a class="active" href="#">About</a>
+					<ul class="animsition">
+						<a class="active" href="#">Porfolio</a>
+						<a href="index.html">About</a>
 						<a href="#">Contact</a>
 					</ul>
 				</div>
@@ -28,7 +30,7 @@
 
 			<div class="card">
 				<a href="http://via.placeholder.com/350x150">
-				<img src="http://via.placeholder.com/350x150"" alt="Avatar" style="width:100%">
+				<img src="http://via.placeholder.com/350x150" alt="Avatar" style="width:100%">
 				</a>
 					 <div class="container">
 			  			 <h4><b>John Doe</b></h4> 
@@ -38,7 +40,7 @@
 
 			<div class="card">
 				<a href="http://via.placeholder.com/350x150">
-				<img src="http://via.placeholder.com/350x150"" alt="Avatar" style="width:100%">
+				<img src="http://via.placeholder.com/350x150" alt="Avatar" style="width:100%">
 				</a>
 					 <div class="container">
 			  			 <h4><b>John Doe</b></h4> 
@@ -47,7 +49,7 @@
 			</div>
 			<div class="card">
 				<a href="http://via.placeholder.com/350x150">
-				<img src="http://via.placeholder.com/350x150"" alt="Avatar" style="width:100%">
+				<img src="http://via.placeholder.com/350x150" alt="Avatar" style="width:100%">
 				</a>
 					 <div class="container">
 			  			 <h4><b>John Doe</b></h4> 
@@ -56,7 +58,7 @@
 			</div>
 			<div class="card">
 				<a href="http://via.placeholder.com/350x150">
-				<img src="http://via.placeholder.com/350x150"" alt="Avatar" style="width:100%">
+				<img src="http://via.placeholder.com/350x150" alt="Avatar" style="width:100%">
 				</a>
 					 <div class="container">
 			  			 <h4><b>John Doe</b></h4> 
@@ -65,7 +67,7 @@
 			</div>
 			<div class="card">
 				<a href="http://via.placeholder.com/350x150">
-				<img src="http://via.placeholder.com/350x150"" alt="Avatar" style="width:100%">
+				<img src="http://via.placeholder.com/350x150" alt="Avatar" style="width:100%">
 				</a>
 					 <div class="container">
 			  			 <h4><b>John Doe</b></h4> 
@@ -74,7 +76,7 @@
 			</div>
 			<div class="card">
 				<a href="http://via.placeholder.com/350x150">
-				<img src="http://via.placeholder.com/350x150"" alt="Avatar" style="width:100%">
+				<img src="http://via.placeholder.com/350x150" alt="Avatar" style="width:100%">
 				</a>
 					 <div class="container">
 			  			 <h4><b>John Doe</b></h4> 
@@ -83,7 +85,7 @@
 			</div>
 			<div class="card">
 				<a href="http://via.placeholder.com/350x150">
-				<img src="http://via.placeholder.com/350x150"" alt="Avatar" style="width:100%">
+				<img src="http://via.placeholder.com/350x150" alt="Avatar" style="width:100%">
 				</a>
 					 <div class="container">
 			  			 <h4><b>John Doe</b></h4> 
@@ -97,5 +99,38 @@
 		</ul>
 	</main>	
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
+<script>
+	
+		$(document).ready(function() {
+		  $(".animsition").animsition({
+			inClass: 'fade-in-left',
+			outClass: 'fade-out-left',
+			inDuration: 1500,
+			outDuration: 800,
+			linkElement: '.animsition-link',
+			// e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+			loading: true,
+			loadingParentElement: 'body', //animsition wrapper element
+			loadingClass: 'animsition-loading',
+			loadingInner: '', // e.g '<img src="loading.svg" />'
+			timeout: false,
+			timeoutCountdown: 5000,
+			onLoadEvent: true,
+			browser: [ 'animation-duration', '-webkit-animation-duration'],
+			// "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+			// The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+			overlay : false,
+			overlayClass : 'animsition-overlay-slide',
+			overlayParentElement : 'body',
+			transition: function(url){ window.location.href = url; }
+		  });
+		});
+		
+		</script>
+
 </body>
+
 </html>
